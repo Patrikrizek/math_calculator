@@ -23,7 +23,12 @@ def multiplication(numbers):
     return product
 
 # Math operation - division
-def division(dividend, divisor):
-    quotient = round(dividend / divisor, 2)
+def division(numbers):
+    quotient = numbers[0]
 
-    return quotient
+    i = 0
+    while i <= (len(numbers) - 2):
+        quotient = quotient / numbers[(len(numbers) + (i + 1)) - len(numbers)]
+        i += 1
+
+    return round(quotient, 2)
